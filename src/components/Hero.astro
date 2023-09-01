@@ -1,0 +1,30 @@
+---
+import heroImage from "../assets/hero.jpg";
+import "@fontsource-variable/playfair-display";
+import "@fontsource-variable/open-sans";
+import OutlineButton from './OutlineButton.astro'
+---
+
+<div
+  class="hero min-h-screen"
+  style="background-image: url(https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80);"
+>
+  <div class="hero-overlay bg-opacity-10"></div>
+  <div class="hero-content text-center text-neutral-content">
+    <div class="max-w-md bg-white bg-opacity-80 p-5">
+      <h2 class="mb-5 text-4xl hero-header text-pablo-500">
+        Supporting you, wherever you are
+      </h2>
+      <p class="mb-5 text-neutral-800 font-body">
+        Telehealth psychology available anywhere in Australia.
+      </p>
+      <OutlineButton />
+    </div>
+  </div>
+
+  <style>
+    .hero-header {
+      font-family: "Playfair Display Variable", sans-serif;
+    }
+  </style>
+</div>
