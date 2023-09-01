@@ -1,0 +1,8 @@
+---
+const { faq } = Astro.props;
+---
+
+<div class="text-neutral-800 p-5">
+  <h3 class="font-sans text-xl text-dark pb-3">{faq.data.question}</h3>
+  <Content />
+</div>

@@ -4,21 +4,16 @@ import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
 import SectionCard from "../components/SectionCard.astro";
 import SectionHeader from "../components/SectionHeader.astro"
+import homePageImage from '../assets/homePageImage.jpg'
+import Button from '../components/Button.astro'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Sunnyside Psychology">
   <main>
     <Hero />
 	<div class="mx-16 mb-8">
-	<SectionHeader />
-    <SectionCard />
+	<SectionHeader headerText="Getting Help"/>
+    <SectionCard cardImageSrc="assets/homePageImage.jpg" />
 	<div/>
   </main>
 </Layout>
-
-<style>
-  .section-header {
-    color: #7f7566;
-    font-family: "Playfair Display Variable", sans-serif;
-  }
-</style>

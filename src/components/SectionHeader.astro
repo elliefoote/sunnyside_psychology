@@ -1,11 +1,13 @@
 ---
 import "@fontsource-variable/playfair-display";
+const { headerText } = Astro.props;
+
 ---
    
 <div class="relative flex py-5 mx-3 items-center">
     <div class="flex-grow border-t border-neutral-800"></div>
     <span class="flex-shrink mx-4 text-neutral-800 text-3xl font-serif"
-    >Getting Help</span
+    >{headerText}</span
     >
     <div class="flex-grow border-t border-neutral-800"></div>
 </div>
