@@ -1,0 +1,49 @@
+---
+const { fee } = Astro.props;
+---
+
+<div class="text-neutral-800 p-5 mx-auto max-w-screen-md">
+  <h3 class="font-sans text-xl text-dark pb-3">{fee.data.heading}</h3>
+    <p class="text-sm pb-3">{fee.data.introText}</p>
+<div class="relative overflow-x-auto rounded">
+    <table class="w-full text-sm text-left text-gray-500 rounded">
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Session Duration
+                </th>
+                <td class="px-6 py-4 text-gray-900 ">
+                   {fee.data.sessionDuration}
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    Fee
+                </th>
+                <td class="px-6 py-4 text-gray-900 ">
+                    {fee.data.fee}
+                </td>
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   Rebate
+                </th>
+                <td class="px-6 py-4 text-gray-900 ">
+                    {fee.data.rebate}
+                </td>
+            </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   Out-of-Pocket Cost
+                </th>
+                <td class="px-6 py-4 text-gray-900 ">
+                    {fee.data.outOfPocketCost}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+
+

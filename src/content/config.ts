@@ -16,14 +16,26 @@ const pageText = defineCollection({
 
 const faqs = defineCollection({
   type: "content", // v2.5.0 and later
-  schema: ({ image }) =>
-    z.object({
-      question: z.string(),
-    }),
+  schema: z.object({
+    question: z.string(),
+  }),
+});
+
+const fees = defineCollection({
+  type: "content", // v2.5.0 and later
+  schema: z.object({
+    heading: z.string(),
+    introText: z.string(),
+    sessionDuration: z.string(),
+    fee: z.string(),
+    rebate: z.string(),
+    outOfPocketCost: z.string(),
+  }),
 });
 
 // 3. Export a single `collections` object to register your collection(s)
 export const collections = {
   pageText: pageText,
   faqs: faqs,
+  fees: fees,
 };

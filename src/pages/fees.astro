@@ -6,19 +6,20 @@ import SectionCard from "../components/SectionCard.astro";
 import SectionHeader from "../components/SectionHeader.astro"
 import homePageImage from '../assets/homePageImage.jpg'
 import Button from '../components/Button.astro'
-import Faq from '../components/Faq.astro'
+import FeeTable from '../components/FeeTable.astro'
 
 import { getCollection } from "astro:content"
-const faqs = await getCollection('faqs')
+const fees = await getCollection('fees')
+console.log(fees)
 ---
 
-<Layout title="Sunny Side Psychology - FAQs">
+<Layout title="Sunny Side Psychology | Fees & Rebates">
   <main>
 	<div class="mx-16 mb-8">
-	<SectionHeader headerText="Frequently Asked Questions"/>
+	<SectionHeader headerText="Fees & Rebates"/>
     <div id="accordion-collapse" data-accordion="collapse">
-        {faqs.map((faq, index) => (
-      <Faq faq={faq} index={index} />
+        {fees.map((fee, index) => (
+      <FeeTable fee={fee} index={index} />
     ))}
     </div>
 	<div/>

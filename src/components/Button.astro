@@ -1,5 +1,5 @@
 ---
-const { buttonText } = Astro.props;
+const { buttonText, type } = Astro.props;
 ---
-<button class="border border-pablo-500 bg-pablo-500 hover:border-pablo-700 hover:bg-pablo-700 px-4 py-3 text-pablo-100 text-bold text-sm">
+<button type={type == "submit" ? "submit" : ""} class="border border-pablo-500 bg-pablo-500 hover:border-pablo-700 hover:bg-pablo-700 px-4 py-3 text-pablo-100 text-bold text-sm">
 {buttonText}</button>
