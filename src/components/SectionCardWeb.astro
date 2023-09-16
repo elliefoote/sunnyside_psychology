@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import Button from "./Button.astro"
+import { getEntry } from "astro:content"
+const homePageText = await getEntry('pageText', 'home')
+const {Content} = await homePageText.render()
+import SectionHeader from './SectionHeader.astro'
+---
+
+<div class="w-screen flex flex-col md:flex-row items-center justify-between mx-auto bg-persian-700">
+  <div class="md:w-1/2 flex flex-col">
+<Image src={homePageText.data.image1} alt={homePageText.data.image1Alt} class="h-96 object-cover hidden md:flex" />
+<Image src={homePageText.data.image1} alt={homePageText.data.image1Alt} class="h-96 object-cover hidden md:flex" />
+</div>
+<div class="text-neutral-800 2xl:px-44 lg:px-20 md:w-1/2 text-center pt-5">
+  <SectionHeader headerText={homePageText.data.heading} />
+  <div class="flex justify-center md:hidden pb-5">
+  <Image src={homePageText.data.image1} alt={homePageText.data.image1Alt} class="w-3/4 object-cover" />
+  </div>
+  <div class="font-serif text-lg text-neutral-200 my-5 text-justify px-10">
+  <Content />
+  </div>
+        <div class="mt-10 mb-10 flex justify-center">
+        <Button buttonText="Services" />
+      </div>
+</div>
+
+</div>

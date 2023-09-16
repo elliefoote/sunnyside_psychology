@@ -7,10 +7,14 @@ const pageText = defineCollection({
   schema: ({ image }) =>
     z.object({
       heading: z.string(),
-      image: image().refine((img) => img.width >= 1080, {
+      image1: image().refine((img) => img.width >= 1080, {
         message: "Cover image must be at least 1080 pixels wide!",
       }),
-      imageAlt: z.string(),
+      image1Alt: z.string(),
+      image2: image().refine((img) => img.width >= 1080, {
+        message: "Cover image must be at least 1080 pixels wide!",
+      }),
+      image2Alt: z.string(),
     }),
 });
 

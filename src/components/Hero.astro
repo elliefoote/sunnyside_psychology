@@ -1,8 +1,7 @@
 ---
-import heroImage from "../assets/hero.jpg";
 import "@fontsource-variable/playfair-display";
 import "@fontsource-variable/open-sans";
-import OutlineButton from './OutlineButton.astro'
+import Button from './Button.astro'
 ---
 
 <div
@@ -11,20 +10,20 @@ import OutlineButton from './OutlineButton.astro'
 >
   <div class="hero-overlay bg-opacity-10"></div>
   <div class="hero-content text-center text-neutral-content">
-    <div class="max-w-md bg-white bg-opacity-90 p-10">
-      <h2 class="mb-5 text-4xl hero-header text-pablo-500">
-        Supporting you, wherever you are
+    <div class="max-w-md bg-persian-700 bg-opacity-90 p-10">
+      <h2 class="mb-5 text-4xl font-serif text-neutral-100">
+        Here for you, wherever you are
       </h2>
-      <p class="mb-5 text-neutral-800 font-body text-lg">
+      <p class="mb-5 text-neutral-100 font-serif text-lg">
         Telehealth psychology available anywhere in Australia.
       </p>
-      <OutlineButton buttonText="BOOK NOW" />
+      <Button buttonText="BOOK NOW" />
     </div>
   </div>
 
   <style>
     .hero-header {
-      font-family: "Playfair Display Variable", sans-serif;
+      font-family: "Sort Mill Goudy", serif;
     }
   </style>
 </div>

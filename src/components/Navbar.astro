@@ -1,6 +1,7 @@
 ---
 import "@fontsource/twinkle-star";
 import "@fontsource-variable/open-sans";
+import Logo from './Logo.astro'
 ---
 
 <nav class="bg-white border-gray-200 font-sans">
@@ -8,23 +9,10 @@ import "@fontsource-variable/open-sans";
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
     <a href="/" class="flex items-center">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 48 48"
-        width="48px"
-        height="48px"
-        fill="#FF9800"
-        ><path fill="#FF9800" d="M11 11H37V37H11z"></path><path
-          fill="#FF9800"
-          d="M11.272 11.272H36.728V36.728H11.272z"
-          transform="rotate(-45.001 24 24)"></path><path
-          fill="#FFEB3B"
-          d="M13,24c0,6.077,4.923,11,11,11c6.076,0,11-4.923,11-11s-4.924-11-11-11C17.923,13,13,17.923,13,24"
-        ></path></svg
-      >
+      <Logo />
       <span
-        class="self-center text-2xl font-semibold whitespace-nowrap brand-name"
-        >Sunny Side Psychology</span
+        class="self-center text-xl whitespace-nowrap font-sans font-light pl-3 pt-2 leading-none text-persian-700"
+        >SUNNY SIDE PSYCHOLOGY</span
       >
     </a>
     <button
@@ -57,7 +45,7 @@ import "@fontsource-variable/open-sans";
         <li>
           <a
             href="#"
-            class="block py-2 pl-3 pr-4 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pablo-500 md:p-0"
+            class="block py-2 pl-3 pr-4 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-persian-700 md:p-0"
             >Book Now</a
           >
         </li>
@@ -65,7 +53,7 @@ import "@fontsource-variable/open-sans";
           <button
             id="dropdownNavbarLink"
             data-dropdown-toggle="dropdownNavbar"
-            class="uppercase flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pablo-500 md:p-0 md:w-auto"
+            class="uppercase flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-persian-700 md:p-0 md:w-auto"
             >About Us<svg
               class="w-2.5 h-2.5 ml-2.5"
               aria-hidden="true"
@@ -94,22 +82,12 @@ import "@fontsource-variable/open-sans";
                 <a
                   href="#"
                   class="block px-4 py-2 hover:bg-gray-100"
-                  >Who We Are</a
-                >
-              </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                  >Services</a
+                  >Our Psychologists & Services</a
                 >
               </li>
               <li>
                 <a href="/fees" class="block px-4 py-2 hover:bg-gray-100"
                   >Fees & Rebates</a
-                >
-              </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100"
-                  >Info for GPs</a
                 >
               </li>
             </ul>
@@ -118,14 +96,14 @@ import "@fontsource-variable/open-sans";
         <li>
           <a
             href="/faqs"
-            class="block py-2 pl-3 pr-4 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pablo-500 md:p-0"
+            class="block py-2 pl-3 pr-4 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-persian-700 md:p-0"
             >FAQs</a
           >
         </li>
         <li>
           <a
             href="/contact"
-            class="block py-2 pl-3 pr-4 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pablo-500 md:p-0"
+            class="block py-2 pl-3 pr-4 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-persian-700 md:p-0"
             >Contact Us</a
           >
         </li>

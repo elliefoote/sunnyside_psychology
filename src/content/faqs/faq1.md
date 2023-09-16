@@ -1,5 +1,5 @@
 ---
-question: "What is the difference between a Health Psychologist and a Clinical Psychologist?"
+question: Do I need a referral?
 ---
 
-All psychologists in Australia must have certain qualifications...
+You're welcome to make an appointment without getting a referral, but a referral is required to claim a rebate.

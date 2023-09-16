@@ -1,7 +1,9 @@
 ---
-heading: "Are you ready for a change?"
-image: "./home.jpg"
-imageAlt: "A photograph of a women on the beach at sunset."
+heading: "Getting Help"
+image1: "./home.jpg"
+image1Alt: "A photograph of a women on the beach at sunset."
+image2: "./home.jpg"
+image2Alt: "A photograph of a women on the beach at sunset."
 ---
 
 Are you fed up with something in your life? Are

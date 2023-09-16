@@ -2,8 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Hero from "../components/Hero.astro";
-import SectionCard from "../components/SectionCard.astro";
-import SectionHeader from "../components/SectionHeader.astro"
+import SectionCardWeb from "../components/SectionCardWeb.astro";
 import homePageImage from '../assets/homePageImage.jpg'
 import Button from '../components/Button.astro'
 ---
@@ -11,9 +10,8 @@ import Button from '../components/Button.astro'
 <Layout title="Sunny Side Psychology">
   <main>
     <Hero />
-	<div class="mx-16 mb-8">
-	<SectionHeader headerText="Getting Help"/>
-    <SectionCard cardImageSrc="assets/homePageImage.jpg" />
+	<div>
+    <SectionCardWeb />
 	<div/>
   </main>
 </Layout>

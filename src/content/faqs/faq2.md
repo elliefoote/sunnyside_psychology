@@ -1,5 +1,5 @@
 ---
-question: I have a Mental Health Treatment Plan from my GP. Does that mean my sessions will be free?
+question: How do I get a referral?
 ---
 
-A Mental Health Treatment Plan allows you to claim...
+Speak to your doctor about your concerns so they can prepare a psychologist referral and relevant care plan (e.g. MHTP). You will generally need to book a longer appointment for this. You can also get a psychologist referral at your Aboriginal and Torres Strait Islander health check.
