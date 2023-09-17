@@ -30,10 +30,9 @@ const fees = defineCollection({
   schema: z.object({
     heading: z.string(),
     introText: z.string(),
-    sessionDuration: z.string(),
-    fee: z.string(),
-    rebate: z.string(),
-    outOfPocketCost: z.string(),
+    fee: z.string().optional(),
+    rebate: z.string().optional(),
+    outOfPocketCost: z.string().optional(),
   }),
 });
 

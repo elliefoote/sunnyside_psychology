@@ -1,11 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Hero from "../components/Hero.astro";
-import SectionCard from "../components/SectionCard.astro";
-import SectionHeader from "../components/SectionHeader.astro"
-import homePageImage from '../assets/homePageImage.jpg'
-import Button from '../components/Button.astro'
 import FeeTable from '../components/FeeTable.astro'
 
 import { getCollection } from "astro:content"
@@ -15,13 +9,29 @@ console.log(fees)
 
 <Layout title="Sunny Side Psychology | Fees & Rebates">
   <main>
-	<div class="mx-16 mb-8">
-	<SectionHeader headerText="Fees & Rebates"/>
-    <div id="accordion-collapse" data-accordion="collapse">
+	<div class="tinted-background flex md:flex-row flex-col px-10">
+    <div class="md:w-1/3 flex justify-center pt-12">
+	<h3 class="font-serif text-5xl text-persian-600 pb-3 mb-5">Fees & Rebates</h3>
+  </div>
+    <div class="md:w-2/3 md:py-12 pt-3 pb-5">
+      <div class="md:bg-white">
         {fees.map((fee, index) => (
       <FeeTable fee={fee} index={index} />
     ))}
     </div>
+    </div>
 	<div/>
   </main>
 </Layout>
+
+<style>
+  .tinted-background {
+    background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.45), 
+      rgba(255, 255, 255, 0.45)
+    ),
+    url(fees.jpg);
+    background-size: cover
+  }
+</style>
