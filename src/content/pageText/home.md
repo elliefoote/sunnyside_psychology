@@ -1,9 +1,9 @@
 ---
 heading: "Getting Help"
-image1: "./home.jpg"
-image1Alt: "A photograph of a women on the beach at sunset."
-image2: "./home.jpg"
-image2Alt: "A photograph of a women on the beach at sunset."
+image1: "./gettingHelp1.jpg"
+image1Alt: ""
+image2: "./gettingHelp2.jpg"
+image2Alt: ""
 ---
 
 Are you fed up with something in your life? Are

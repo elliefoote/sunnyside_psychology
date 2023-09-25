@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import Services from "../assets/services.jpg"
+const services_provided = [
+  "Mood and anxiety concerns, such as depression, social anxiety, phobias and health anxiety",
+  "Difficulties relating to trauma or life stressors",
+  "Adjusting to big life changes, working out what you value and finding your new normal",
+  "Making positive changes to health-related behaviours, such as eating habits, substance use and self-care",
+  "Managing chronic pain and other chronic conditions"
+]
+const not_provided = [
+  "Formal assessments (e.g., for NDIS, Centrelink, court matters, firearms licensing)",
+  "Neuropsychological assessments (e.g., for ADHD, autism, intellectual disability)",
+  "Couples or family therapy",
+  "Management of acute mental illness or crisis, where in-person assessment and treatment are needed to ensure client safety and well-being"
+]
+---
+<div class="text-persian-800 flex flex-col md:flex-row-reverse md:my-10 my-5 md:px-10">
+<Image src={Services} alt="" class="object-cover rounded-3xl md:w-1/3" />
+<div class="md:w-2/3">
+
+<div class="my-5 pe-3">
+<h4 class="text-lg uppercase">Who We See</h4>
+<p class="font-serif">We provide individual psychological therapy for adolescents, adults and older adults.</p>
+</div>
+
+<div class="my-5 pe-3">
+<h4 class="text-lg uppercase">What We Can Help With</h4>
+<ul class="font-serif">
+{services_provided.map(service => (
+  <li class="py-1">• {service}</li>
+))}
+</ul>
+</div>
+
+<div class="my-5 pe-3">
+<h4 class="text-lg uppercase">Services We Don't Provide</h4>
+<ul class="font-serif">
+{not_provided.map(service => (
+  <li class="py-1">• {service}</li>
+))}
+</ul>
+</div>
+
+</div>
+
+</div>

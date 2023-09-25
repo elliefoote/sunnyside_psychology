@@ -1,21 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Hero from "../components/Hero.astro";
-import SectionCard from "../components/SectionCard.astro";
 import SectionHeader from "../components/SectionHeader.astro"
 import ContactForm from '../components/ContactForm.astro'
-import homePageImage from '../assets/homePageImage.jpg'
-import Button from '../components/Button.astro'
 ---
 
 <Layout title="Sunny Side Psychology">
   <main>
-	<div class="mx-16 mb-8">
-	<SectionHeader headerText="Contact Us"/>
-	<div>
-
+	<div class="px-16 pt-8 pb-8 bg-persian-600">
+	<div class="mx-auto max-w-screen-md">
+	<h3 class="font-serif text-5xl text-neutral-100 pb-3 mb-5">Contact Us</h3>
+	<p class="font-serif text-neutral-100 text-lg"> To make a booking, please <a class="text-pablo-500" href="/booknow">book online</a>. For any other questions, please send an enquiry using the contact form below.</p>
 	<ContactForm />
+	<div class="flex flex-row text-neutral-100 mt-5">
+	<div class="mr-16">
+	<h4 class="uppercase font-light tracking-wider text-lg">Email:</h4>
+	<p class="font-serif">sunnysidepsychology@outlook.com</p>
+	</div>
+	<div>
+	<h4 class="uppercase font-light tracking-wider text-lg">Post:</h4>
+	<p class="font-serif">PO Box 3163 <br> West Kempsey NSW 2440</p>
+	</div>
+	</div>
 	</div>
 	<div/>
   </main>

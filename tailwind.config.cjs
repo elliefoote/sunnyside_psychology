@@ -31,6 +31,9 @@ module.exports = {
         950: "#132b3e",
       },
     },
+    fontFamily: {
+      forum: ["Forum", "sans-serif"],
+    },
     extend: {
       fontFamily: {
         sans: ["Montserrat Variable", ...defaultTheme.fontFamily.sans],

@@ -1,16 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import SectionCardWeb from "../components/SectionCardWeb.astro";
-import homePageImage from '../assets/homePageImage.jpg'
-import Button from '../components/Button.astro'
+import PsychologistCard from "../components/PsychologistCard.astro"
+import ServicesCard from "../components/ServicesCard.astro"
+import Button from "../components/Button.astro"
 ---
 
 <Layout title="Sunny Side Psychology">
-  <main>
-    <Hero />
-	<div>
-    <SectionCardWeb />
-	<div/>
+  <main class="bg-neutral-100 pt-10">
+    <div class="m-auto max-w-screen-lg flex flex-col items-center">
+<h3 class="font-serif text-5xl text-persian-600">Our Psychologists</h3>
+<PsychologistCard />
+<h3 class="font-serif text-5xl text-persian-600">Our Services</h3>
+<ServicesCard />
+</div>
+<Button buttonText="Book Now" />
   </main>
 </Layout>
