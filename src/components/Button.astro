@@ -1,7 +1,21 @@
 ---
-const { buttonText, type } = Astro.props;
+const { buttonText, type, href } = Astro.props;
 ---
-<button type={type == "submit" ? "submit" : "button"} 
-class="border border-matisse-700 rounded-3xl bg-matisse-700 hover:border-matisse-900 hover:bg-matisse-900 px-10 py-2 text-neutral-100 text-sm uppercase font-thin">
-{buttonText}
-</button>
+<>
+{
+    type == "submit" ?
+    (
+        <button type="submit" 
+            class="border border-matisse-700 rounded-3xl bg-matisse-700 hover:border-matisse-900 hover:bg-matisse-900 px-10 py-2 text-neutral-100 text-sm uppercase font-thin">
+            {buttonText}    
+        </button>
+    )
+    :
+    (
+        <a href={href} 
+            class="border border-matisse-700 rounded-3xl bg-matisse-700 hover:border-matisse-900 hover:bg-matisse-900 px-10 py-2 text-neutral-100 text-sm uppercase font-thin">
+            {buttonText}
+        </a>   
+    )
+}
+</>
