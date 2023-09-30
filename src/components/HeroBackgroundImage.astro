@@ -1,0 +1,15 @@
+---
+import { getImage } from "astro:assets";
+import HeroImage from '../assets/hero.jpg'
+
+const optimizedBackground = await getImage({src: HeroImage, format: 'avif'})
+---
+
+<div style={`background-image: url(${optimizedBackground.src});`}></div>
+
+<div
+  class="hero min-h-screen"
+  style={`background-image: url(${optimizedBackground.src});`}
+>
+<slot />
+</div>

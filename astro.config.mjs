@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, squooshImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
 import vercelServerless from "@astrojs/vercel/serverless";
@@ -8,4 +8,7 @@ export default defineConfig({
   integrations: [tailwind()],
   adapter: vercelServerless(),
   output: "hybrid",
+  image: {
+    service: squooshImageService(),
+  },
 });

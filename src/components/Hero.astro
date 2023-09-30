@@ -2,12 +2,10 @@
 import "@fontsource-variable/playfair-display";
 import "@fontsource-variable/open-sans";
 import Button from './Button.astro'
+import HeroBackgroundImage from "./HeroBackgroundImage.astro";
 ---
 
-<div
-  class="hero min-h-screen"
-  style="background-image: url(https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80);"
->
+<HeroBackgroundImage>
   <div class="hero-overlay bg-opacity-10"></div>
   <div class="hero-content text-center text-neutral-content">
     <div class="max-w-md bg-persian-700 bg-opacity-90 p-10">
@@ -20,10 +18,4 @@ import Button from './Button.astro'
       <Button buttonText="BOOK NOW" />
     </div>
   </div>
-
-  <style>
-    .hero-header {
-      font-family: "Sort Mill Goudy", serif;
-    }
-  </style>
-</div>
+</HeroBackgroundImage>
