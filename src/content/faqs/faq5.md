@@ -1,5 +1,5 @@
 ---
-question: Is telehealth covered by Medicare?
+question: What should I expect from a telehealth session?
 ---
 
-Yes, you can receive the same rebate for a telehealth psychologist appointment as you can for an in-person appointment if you have a current referral.
+You'll receive a link to a virtual room, which only you and your psychologist have access to. You will log into the room at your appointment time and have your psychology session over a video call. You should be able to access telehealth from any device you use to browse the internet (e.g. laptop, tablet, smart phone) and you won't need to download any special programs or apps. It's important that you are somewhere quiet and private for the session.
