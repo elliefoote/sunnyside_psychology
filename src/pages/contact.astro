@@ -1,25 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import SectionHeader from "../components/SectionHeader.astro"
-import ContactForm from '../components/ContactForm.astro'
+import NewContactForm from '../components/NewContactForm'
 ---
 
-<Layout title="Sunny Side Psychology">
+<Layout title="Sunny Side Psychology | Contact Us">
   <main>
 	<div class="px-16 pt-8 pb-8 bg-persian-600">
 	<div class="mx-auto max-w-screen-md">
 	<h3 class="font-serif text-5xl text-neutral-100 pb-3 mb-5">Contact Us</h3>
 	<p class="font-serif text-neutral-100 text-lg"> To make a booking, please <a class="text-pablo-500" href="/booknow">book online</a>. For any other questions, please send an enquiry using the contact form below.</p>
-	<ContactForm />
-	<div class="flex flex-row text-neutral-100 mt-5">
-	<div class="mr-16">
-	<h4 class="uppercase font-light tracking-wider text-lg">Email:</h4>
-	<p class="font-serif">sunnysidepsychology@outlook.com</p>
-	</div>
-	<div>
-	<h4 class="uppercase font-light tracking-wider text-lg">Post:</h4>
-	<p class="font-serif">PO Box 3163 <br> West Kempsey NSW 2440</p>
-	</div>
+	<NewContactForm client:load />
+	<div class="flex md:flex-row flex-col text-neutral-100 mt-5">
+		<div class="mr-16 pb-5">
+			<h4 class="uppercase font-light tracking-wider text-lg">Email:</h4>
+			<p class="font-serif">sunnysidepsychology@outlook.com</p>
+		</div>
+		<div>
+			<h4 class="uppercase font-light tracking-wider text-lg">Post:</h4>
+			<p class="font-serif">PO Box 3163 <br> West Kempsey NSW 2440</p>
+		</div>
 	</div>
 	</div>
 	<div/>

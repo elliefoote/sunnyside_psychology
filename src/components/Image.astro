@@ -51,7 +51,6 @@ const generateSrcSet = async (size: number) => {
 };
 const srcsetPromises = validSizes.map(generateSrcSet);
 const srcsetResults = await Promise.all(srcsetPromises);
-console.log(srcsetResults)
 const srcset = srcsetResults.join(", ");
 const sizesAttrMapped = validSizes
   .map((size) => `(max-width: ${size}px) ${size}px`)
