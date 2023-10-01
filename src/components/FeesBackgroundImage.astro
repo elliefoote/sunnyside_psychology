@@ -1,0 +1,13 @@
+---
+import { getImage } from "astro:assets";
+import FeesImage from '../assets/fees.jpg'
+
+const optimizedBackground = await getImage({src: FeesImage, format: 'webp'})
+---
+
+<div
+  class="flex md:flex-row flex-col px-10 bg-cover"
+  style={`background-image: url(${optimizedBackground.src});`}
+>
+<slot />
+</div>

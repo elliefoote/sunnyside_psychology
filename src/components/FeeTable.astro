@@ -8,31 +8,31 @@ const { fee } = Astro.props;
   <SunIcon />
   </div>
   <h3 class="font-sans uppercase font-light text-xl pb-3 text-center">{fee.data.heading}</h3>
-<div class="flex justify-center">
+<div class="flex flex-col justify-center">
     {fee.data.fee && (
-            <table class="text-sm text-left rounded font-serif">
+            <table class="text-sm text-left font-serif table-fixed">
         <tbody>
             <tr>
-                <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-right">
+                <th scope="row" class="pr-3 py-2 font-medium text-right w-1/2">
                     Fee
                 </th>
-                <td class="px-6 py-2">
+                <td class="pl-3 py-2">
                     {fee.data.fee}
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-right">
+                <th scope="row" class="pr-3 py-2 font-medium text-right">
                    Rebate
                 </th>
-                <td class="px-6 py-2">
+                <td class="pl-3 py-2">
                     {fee.data.rebate}
                 </td>
             </tr>
             <tr>
-                <th scope="row" class="px-6 py-2 font-medium whitespace-nowrap text-right">
+                <th scope="row" class="pr-3 py-2 font-medium text-right">
                    Out-of-Pocket Cost
                 </th>
-                <td class="px-6 py-2">
+                <td class="pl-3 py-2">
                     {fee.data.outOfPocketCost}
                 </td>
             </tr>
