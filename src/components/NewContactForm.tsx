@@ -1,4 +1,4 @@
-import { type FormEvent, useState } from "react";
+import { useState } from "react";
 import SubmitButton from "./SubmitButton";
 import { Formik, Field, Form } from "formik";
 
@@ -23,16 +23,19 @@ export default function ContactForm() {
             Please be aware that this is NOT a crisis service and you will not
             receive a response straight away.
           </p>
-          <p className="pb-3">
+          <div className="pb-3">
             If you need help right now, please call:
             <ul>
               <li>• Lifeline: 13 11 14 </li>
               <li>• Suicide Call Back Service: 1300 659 467</li>
             </ul>
-          </p>
+          </div>
           <p className="pb-3">
-            Find more helpline options:
-            https://www.healthdirect.gov.au/mental-health-helplines
+            Visit{" "}
+            <a href="https://www.healthdirect.gov.au/mental-health-helplines">
+              HealthDirect
+            </a>{" "}
+            to find more helpline options.
           </p>
           If you or someone else is unsafe now, please call 000.
         </div>
@@ -98,13 +101,14 @@ export default function ContactForm() {
               >
                 Your message
               </label>
-              <textarea
+              <Field
+                as="textarea"
                 id="message"
                 name="message"
                 rows={6}
                 className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
                 placeholder="Leave a comment..."
-              ></textarea>
+              ></Field>
             </div>
             <SubmitButton />
           </Form>

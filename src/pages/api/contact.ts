@@ -1,9 +1,9 @@
 import type { APIRoute } from "astro";
 
 export const prerender = false;
+const apiUrl = import.meta.env.API_URL;
 
 export const GET: APIRoute = async ({ request }) => {
-  const apiUrl = import.meta.env.API_URL;
   return new Response(
     JSON.stringify({
       message: "The API url is: " + apiUrl,
@@ -14,10 +14,11 @@ export const GET: APIRoute = async ({ request }) => {
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.json();
-  const name = data["name"];
+  console.log(data);
   const email = data["email"];
+  const subject = data["subject"];
   const message = data["message"];
-  if (!name || !email || !message) {
+  if (!subject || !email || !message) {
     return new Response(
       JSON.stringify({
         message: "Missing required fields",
@@ -25,10 +26,24 @@ export const POST: APIRoute = async ({ request }) => {
       { status: 400 }
     );
   }
-  return new Response(
-    JSON.stringify({
-      message: "Success!",
-    }),
-    { status: 200 }
-  );
+  const body = JSON.stringify({
+    senderEmail: email,
+    subject: subject,
+    message: message,
+  });
+  const requestOptions = {
+    method: "POST",
+    body,
+  };
+  const response = await fetch(apiUrl, requestOptions);
+  const result = await response.json();
+  console.log(result);
+  if (response.ok) {
+    return new Response(
+      JSON.stringify({
+        message: "Success!",
+      }),
+      { status: 200 }
+    );
+  }
 };
