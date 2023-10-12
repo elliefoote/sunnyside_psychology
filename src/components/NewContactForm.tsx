@@ -1,6 +1,8 @@
 import { useState } from "react";
 import SubmitButton from "./SubmitButton";
 import { Formik, Field, Form } from "formik";
+import FormSubmissionSuccess from "./FormSubmissionSuccess";
+import FormSubmissionFailure from "./FormSubmissionFailure";
 
 interface Values {
   name: string;
@@ -10,36 +12,34 @@ interface Values {
 }
 
 export default function ContactForm() {
-  const [responseMessage, setResponseMessage] = useState("");
+  const [responseStatus, setResponseStatus] = useState("");
 
   return (
     <div className="py-8 lg:py-6 px-4 mt-6 drop-shadow-md bg-neutral-100 rounded">
-      {responseMessage ? (
-        <div className="text-gray-900">
-          <p className="pb-3">
-            Thank you for your enquiry! We will get back to you as soon as
-            possible.
-          </p>
-          <p className="pb-3">
-            Please be aware that this is NOT a crisis service and you will not
-            receive a response straight away.
-          </p>
-          <div className="pb-3">
-            If you need help right now, please call:
-            <ul>
-              <li>• Lifeline: 13 11 14 </li>
-              <li>• Suicide Call Back Service: 1300 659 467</li>
-            </ul>
+      {responseStatus == "success" ? (
+        <div>
+          <FormSubmissionSuccess />
+          <div className="flex justify-center">
+            <button
+              className="border border-matisse-700 rounded-3xl bg-matisse-700 hover:border-matisse-900 hover:bg-matisse-900 px-10 py-2 mt-4 text-neutral-100 text-sm uppercase"
+              onClick={() => setResponseStatus("")}
+            >
+              Reset Form
+            </button>
           </div>
-          <p className="pb-3">
-            Visit{" "}
-            <a href="https://www.healthdirect.gov.au/mental-health-helplines">
-              HealthDirect
-            </a>{" "}
-            to find more helpline options.
-          </p>
-          If you or someone else is unsafe now, please call 000.
         </div>
+      ) : responseStatus == "failure" ? (
+        <>
+          <FormSubmissionFailure />
+          <div className="flex justify-center">
+            <button
+              className="border border-matisse-700 rounded-3xl bg-matisse-700 hover:border-matisse-900 hover:bg-matisse-900 px-10 py-2 mt-4 text-neutral-100 text-sm uppercase"
+              onClick={() => setResponseStatus("")}
+            >
+              Reset Form
+            </button>
+          </div>
+        </>
       ) : (
         <Formik
           initialValues={{
@@ -57,9 +57,10 @@ export default function ContactForm() {
               method: "POST",
               body: JSON.stringify(values),
             });
-            const data = await response.json();
-            if (data.message) {
-              setResponseMessage(data.message);
+            if (response.status == 200) {
+              setResponseStatus("success");
+            } else {
+              setResponseStatus("failure");
             }
           }}
         >

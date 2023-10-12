@@ -10,7 +10,7 @@ export const POST: APIRoute = async ({ request }) => {
   const email = data["email"];
   const subject = data["subject"];
   const message = data["message"];
-  if (!subject || !email || !message) {
+  if (!name || !subject || !email || !message) {
     return new Response(
       JSON.stringify({
         message: "Missing required fields",
@@ -29,14 +29,19 @@ export const POST: APIRoute = async ({ request }) => {
     body,
   };
   const response = await fetch(apiUrl, requestOptions);
-  const result = await response.json();
-  console.log(result);
   if (response.ok) {
     return new Response(
       JSON.stringify({
         message: "Success!",
       }),
       { status: 200 }
+    );
+  } else {
+    return new Response(
+      JSON.stringify({
+        message: "Error when submitting form",
+      }),
+      { status: 500 }
     );
   }
 };
