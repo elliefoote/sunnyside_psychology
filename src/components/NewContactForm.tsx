@@ -86,7 +86,7 @@ export default function ContactForm() {
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-gray-900"
               >
-                Your email
+                Email
               </label>
               <Field
                 type="email"
@@ -118,7 +118,7 @@ export default function ContactForm() {
                 htmlFor="message"
                 className="block mb-2 text-sm font-medium text-gray-900"
               >
-                Your message
+                Message
               </label>
               <Field
                 as="textarea"
