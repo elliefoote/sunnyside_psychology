@@ -2,4 +2,4 @@
 question: "What is the difference between a Health Psychologist and a Clinical Psychologist?"
 ---
 
-All psychologists in Australia are registered with AHPRA, which requires formal training (currently a minimum of 6 years) and ongoing professional development. Some psychologists opt to do additional training in a specific area of practice. There are 9 areas of practice, including clinical psychology and health psychology. Find out more about health psychologists here.
+Health Psychologists and Clinical Psychologists have both completed the same amount of formal training, which includes a minimum of 6 years of university education and a further 2 years of supervised practice in their particular area of psychology. Clinical Psychologists primarily focus on the diagnosis and treatment of mental illness, while Health Psychologists primarily focus on developing strategies to improve mental, emotional and physical well-being. All Psychologists in Australia are registered health practitioners who are able to provide evidence-based psychological assessment and treatment.

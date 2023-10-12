@@ -4,16 +4,15 @@ import NewContactForm from '../components/NewContactForm'
 ---
 
 <Layout title="Sunny Side Psychology | Contact Us">
-  <main>
-	<div class="px-16 pt-8 pb-8 bg-persian-600">
-	<div class="mx-auto max-w-screen-md">
-	<h3 class="font-serif text-5xl text-neutral-100 pb-3 mb-5">Contact Us</h3>
-	<p class="font-serif text-neutral-100 text-lg"> To make a booking, please <a class="text-pablo-500" href="https://my.powerdiary.com/clientportal/sunnysidepsychology">book online</a>. For any other questions, please send an enquiry using the contact form below.</p>
+  <main class="md:px-16 px-8 pt-8 pb-8 bg-persian-600">
+	<div class="mx-auto max-w-screen-lg">
+	<h3 class="font-serif text-5xl text-neutral-100 pb-3 mb-5 text-center">Contact Us</h3>
+	<p class="font-serif text-neutral-100 text-lg text-justify"> To make a booking, please <a class="text-pablo-500" href="https://my.powerdiary.com/clientportal/sunnysidepsychology">book online</a>. For any other questions, please send an enquiry using the contact form below.</p>
 	<NewContactForm client:load />
 	<div class="flex md:flex-row flex-col text-neutral-100 mt-5">
 		<div class="mr-16 pb-5">
 			<h4 class="uppercase font-light tracking-wider text-lg">Email:</h4>
-			<p class="font-serif">sunnysidepsychology@outlook.com</p>
+			<a href="mailto:sunnysidepsychology@outlook.com"class="font-serif">sunnysidepsychology@outlook.com</a>
 		</div>
 		<div>
 			<h4 class="uppercase font-light tracking-wider text-lg">Post:</h4>
@@ -21,6 +20,5 @@ import NewContactForm from '../components/NewContactForm'
 		</div>
 	</div>
 	</div>
-	<div/>
   </main>
 </Layout>

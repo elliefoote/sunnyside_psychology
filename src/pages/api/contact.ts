@@ -6,6 +6,7 @@ const apiUrl = import.meta.env.API_URL;
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.json();
   console.log(data);
+  const name = data["name"];
   const email = data["email"];
   const subject = data["subject"];
   const message = data["message"];
@@ -18,6 +19,7 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
   const body = JSON.stringify({
+    senderName: name,
     senderEmail: email,
     subject: subject,
     message: message,

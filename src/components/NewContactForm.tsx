@@ -3,6 +3,7 @@ import SubmitButton from "./SubmitButton";
 import { Formik, Field, Form } from "formik";
 
 interface Values {
+  name: string;
   email: string;
   subject: string;
   message: string;
@@ -42,6 +43,7 @@ export default function ContactForm() {
       ) : (
         <Formik
           initialValues={{
+            name: "",
             email: "",
             subject: "",
             message: "",
@@ -62,6 +64,22 @@ export default function ContactForm() {
           }}
         >
           <Form className="space-y-8">
+            <div>
+              <label
+                htmlFor="name"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                Name
+              </label>
+              <Field
+                type="text"
+                id="name"
+                name="name"
+                className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700"
+                placeholder="Your name"
+                required
+              />
+            </div>
             <div>
               <label
                 htmlFor="email"
@@ -110,7 +128,9 @@ export default function ContactForm() {
                 placeholder="Leave a comment..."
               ></Field>
             </div>
-            <SubmitButton />
+            <div className="flex justify-center">
+              <SubmitButton />
+            </div>
           </Form>
         </Formik>
       )}
