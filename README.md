@@ -13,7 +13,7 @@ This repository contains the code and resources for the Sunnyside Psychology web
 
 ## Introduction
 
-Sunnyside Psychology is a private psychology practice that provides mental health resources and support. The website is built using the Astro JS framework, with Tailwind CSS. 
+Sunnyside Psychology is a private psychology practice that provides mental health resources and support. The website is built using Astro, with Tailwind CSS. 
 
 ## Installation
 
